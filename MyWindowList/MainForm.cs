@@ -25,7 +25,8 @@ namespace MyWindowList
 
         private void mFileExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+
         }
 
         private void mHelpContacts_Click(object sender, EventArgs e)
@@ -33,6 +34,26 @@ namespace MyWindowList
             ContactForm contactForm = new ContactForm();
             contactForm.ShowDialog();
 
+        }
+
+
+        private void MainForm_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            using (ExitForm exitWindow = new ExitForm())
+            {
+                DialogResult result = exitWindow.ShowDialog();
+
+                if (result == DialogResult.No)
+                {
+
+                    e.Cancel = true;
+                }
+                else
+                {
+                     Application.ExitThread();
+                   
+                }
+            }
         }
     }
 }

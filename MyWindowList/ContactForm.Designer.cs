@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             pbImage = new PictureBox();
-            label1 = new Label();
+            lab1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -50,14 +50,14 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            label1.ForeColor = SystemColors.HotTrack;
-            label1.Location = new Point(282, 14);
-            label1.Name = "label1";
-            label1.Size = new Size(166, 45);
-            label1.TabIndex = 1;
-            label1.Text = "Контакти";
+            lab1.AutoSize = true;
+            lab1.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point, 204);
+            lab1.ForeColor = SystemColors.HotTrack;
+            lab1.Location = new Point(282, 14);
+            lab1.Name = "label1";
+            lab1.Size = new Size(166, 45);
+            lab1.TabIndex = 1;
+            lab1.Text = "Контакти";
             // 
             // label2
             // 
@@ -130,7 +130,7 @@
             Controls.Add(label6);
             Controls.Add(label4);
             Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lab1);
             Controls.Add(pbImage);
             Name = "ContactForm";
             Text = "Контакти";
@@ -143,7 +143,7 @@
         #endregion
 
         private PictureBox pbImage;
-        private Label label1;
+        private Label lab1;
         private Label label2;
         private Label label3;
         private Label label4;
